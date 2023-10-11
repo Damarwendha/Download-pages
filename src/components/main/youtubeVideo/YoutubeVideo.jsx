@@ -4,6 +4,8 @@ import './youtubeVideo.css'
 export default function YoutubeVideo({videoId}) {
   return (
     <iframe
+      width="560px"
+      height="315px"
       src={`https://www.youtube.com/embed/${videoId}`}
       title="YouTube video player"
       frameBorder="0"
