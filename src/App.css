@@ -1,0 +1,170 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 1000px;
+  text-align: center; */
+  padding-top: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  transition: all 1s;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  border-bottom: 1px solid #720874;
+  z-index: 1;
+  animation: colorChange 8s infinite;
+}
+.child {
+  float: left;
+  box-sizing: border-box;
+  transition: all 1s;
+  z-index: 2;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 50%;
+  width: 45px;
+  margin: 0px 0px;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+.channel-name {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 20px;
+  color: #b4b4b4;
+}
+.channel-name:hover {
+  filter: drop-shadow(0 0 0.2em #ffffffaa);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h3 {
+  color: #ffffff;
+}
+
+.main .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2b2b2b;
+  padding: 10px 50px;
+  transition: all 0.5s;
+}
+
+.box:hover {
+  filter: drop-shadow(0 0 0.5em #ffffff2d);
+}
+
+.box .version {
+  margin-bottom: -10px;
+  margin-top: -20px;
+}
+
+.box span {
+  margin: -3px;
+  animation: bounce2 5s infinite;
+}
+
+.box .pw {
+  margin-bottom: -0px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+/* Youtube logo */
+.footer a {
+  align-self: center;
+}
+.footer a img {
+  width: 45px;
+  animation: bounce 3s infinite;
+}
+
+.footer p {
+  align-self: center;
+  margin: 0;
+}
+
+@keyframes colorChange {
+  0% {
+    border-bottom: 1px solid #720874;
+  }
+  25% {
+    border-bottom: 1px solid #081374;
+  }
+  50% {
+    border-bottom: 1px solid #1a7408;
+  }
+  75% {
+    border-bottom: 1px solid #6d7408;
+  }
+  100% {
+    border-bottom: 1px solid #720874;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
