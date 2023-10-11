@@ -1,0 +1,44 @@
+@import '../../animation/colorChange.css';
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  transition: all 1s;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  border-bottom: 1px solid #720874;
+  z-index: 1;
+  animation: colorChange 8s infinite;
+}
+.child {
+  float: left;
+  box-sizing: border-box;
+  transition: all 1s;
+  z-index: 2;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navbar img {
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 50%;
+  width: 45px;
+  margin: 0px 0px;
+}
+.navbar img:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+.channel-name {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 20px;
+  color: #b4b4b4;
+}
+.channel-name:hover {
+  filter: drop-shadow(0 0 0.2em #ffffffaa);
+}

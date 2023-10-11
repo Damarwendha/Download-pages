@@ -1,0 +1,17 @@
+@keyframes colorChange {
+  0% {
+    border-bottom: 1px solid #720874;
+  }
+  25% {
+    border-bottom: 1px solid #081374;
+  }
+  50% {
+    border-bottom: 1px solid #1a7408;
+  }
+  75% {
+    border-bottom: 1px solid #6d7408;
+  }
+  100% {
+    border-bottom: 1px solid #720874;
+  }
+}
