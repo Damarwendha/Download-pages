@@ -1,0 +1,28 @@
+@import '../../animation/bounce.css';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -15px;
+  border-top: 1px solid rgb(80, 80, 80);
+}
+
+.footer .logo {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer a img {
+  animation: bounce 3s infinite;
+}
+
+.footer p {
+  align-self: center;
+  white-space: nowrap;
+  margin: 0;
+}

@@ -1,0 +1,12 @@
+@import '../../animation/bounce2.css';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.arrow {
+  margin: -3px;
+  animation: bounce2 5s infinite;
+}
