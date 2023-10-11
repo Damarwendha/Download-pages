@@ -22,6 +22,7 @@
   z-index: 2;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .navbar img {
   will-change: filter;
