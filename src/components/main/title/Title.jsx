@@ -4,9 +4,9 @@ import "./title.css";
 export default function Title({ emoji, text }) {
   return (
     <h3>
-      <span>{emoji}</span>
-      {text}
-      <span>{emoji}</span>
+      <span> {emoji} </span> 
+      {text} 
+      <span> {emoji} </span>
     </h3>
   );
 }
