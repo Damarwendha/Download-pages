@@ -5,6 +5,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow: hidden;
 }
+
 body {
   padding-top: 50px;
   position: relative;
@@ -43,4 +44,11 @@ body {
   body {
     animation: moveBg 120s infinite;
   }
+}
+
+@media only screen and (max-device-width: 480px) {
+    html {
+      height: calc(100% + 60px);
+      min-height: calc(100% + 60px);
+    }
 }
