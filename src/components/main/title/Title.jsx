@@ -3,7 +3,7 @@ import "./title.css";
 
 export default function Title({ emoji, text }) {
   return (
-    <h3>
+    <h3 id='patch'>
       <span>{emoji} </span>
        {text} 
       <span> {emoji}</span>

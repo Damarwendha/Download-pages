@@ -1,36 +1,41 @@
 import { useState } from "react";
-import Box from "./box/Box";
 import Title from "./title/Title";
-import Version from "./version/Version";
-import Download from "./download/Download";
-import YoutubeVideo from "./youtubeVideo/YoutubeVideo";
+import Version from "./downloadBox/version/Version";
+import Link from "./downloadBox/link/Link";
+import YoutubeVideo from "./downloadBox/youtubeVideo/YoutubeVideo";
+import DownloadBox from "./downloadBox/DownloadBox";
 import Button from "./button/Button";
+import configFpsData from "../utils/configFpsData";
 
 import "./main.css";
 
 export default function Main() {
   const [showVideo, setShowVideo] = useState(false);
+
+  const { patch: str, desc: data } = configFpsData;
+
   return (
     <div className="main">
-      <Title emoji="🔧" text="CONFIG ML PATCH NOLAN" />
-      <Box margin="0px 0px 10px 0px">
-        <>
-          <Version v={3} />
-          <span className="arrow">{"👇 "}</span>
-          <Download
-            pw="Password di Video"
-            link="https://sfile.mobi/6GMFi8AJr2V"
-          />
+      <h1 className='subscribe'>Subscribe!!</h1>
+      <Title emoji="🔧" text={`PATCH ${str}`} />
 
-          {showVideo ? (
-            <YoutubeVideo videoId="izE-Skra5Po?si=NkS_T5zJBtqv2e5z" />
-          ) : (
-            <Button onClick={() => setShowVideo((s) => !s)}>
-              Belum tau pw-nya bang
-            </Button>
-          )}
-        </>
-      </Box>
+      {data.map((obj) => (
+        <DownloadBox key={obj.downloadLink}>
+          <>
+            <Version v={3} />
+            <span className="arrow">{"👇 "}</span>
+            <Link pw="Password di Video" link={`${obj.downloadLink}`} />
+
+            {showVideo ? (
+              <YoutubeVideo videoId={`${obj.videoId}`} />
+            ) : (
+              <Button onClick={() => setShowVideo((s) => !s)}>
+                Belum tau pw-nya bang
+              </Button>
+            )}
+          </>
+        </DownloadBox>
+      ))}
     </div>
   );
 }

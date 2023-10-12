@@ -4,9 +4,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .arrow {
   margin: -3px;
   animation: bounce2 5s infinite;
+}
+.boxmain:hover{
+  filter: drop-shadow(0 0 1em #000000);
+}
+.subscribe{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.subscribe:hover{
+  font-style: italic;
 }

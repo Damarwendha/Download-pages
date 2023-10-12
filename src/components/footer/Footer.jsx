@@ -1,5 +1,4 @@
 import Logo from "./logo/Logo";
-import Box from "../main/box/Box.jsx";
 
 import "./footer.css";
 import "../main/box/box.css";
@@ -7,7 +6,6 @@ import "../main/box/box.css";
 export default function Footer() {
   return (
     <div className="footer">
-      <Box>
         <>
           <div className="logo">
             <Logo
@@ -24,7 +22,6 @@ export default function Footer() {
           </div>
           <p>Copyright 2014 © Ledac Official</p>
         </>
-      </Box>
     </div>
   );
 }
