@@ -26,7 +26,6 @@ body {
 
 .bg{
   background-image: url(../public/images/mlbb.jpg);
-  background-size: cover;
   background-position: 40%;
   animation: moveBg 50s infinite;
   position: fixed;
