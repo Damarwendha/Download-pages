@@ -19,10 +19,10 @@ export default function Main() {
       <h1 className='subscribe'>Subscribe!!</h1>
       <Title emoji="🔧" text={`PATCH ${patch}`} />
 
-      {data.map((obj) => (
+      {data.map((obj, i) => (
         <DownloadBox key={obj.downloadLink}>
           <>
-            <Version v={obj.versi} />
+            <Version v={i === 0  ? obj.versi + ' ( Terbaru )' : obj.versi} />
             <span className="arrow">{"👇 "}</span>
             <Link pw="Password di Video" link={`${obj.downloadLink}`} />
 
