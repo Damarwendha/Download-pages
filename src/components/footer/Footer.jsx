@@ -1,6 +1,7 @@
 import Logo from "./logo/Logo";
 
 import "./footer.css";
+import "../main/box/box.css";
 
 export default function Footer() {
   return (

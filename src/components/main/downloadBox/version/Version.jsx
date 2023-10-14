@@ -10,5 +10,5 @@ export default function Version({ v }) {
 }
 
 Version.propTypes = {
-  v: PropTypes.number,
+  v: PropTypes.string,
 };
