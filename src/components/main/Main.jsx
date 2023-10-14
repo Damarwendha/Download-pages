@@ -12,17 +12,17 @@ import "./main.css";
 export default function Main() {
   const [showVideo, setShowVideo] = useState(false);
 
-  const { patch: str, desc: data } = configFpsData;
+  const { patch, desc: data } = configFpsData;
 
   return (
     <div className="main">
       <h1 className='subscribe'>Subscribe!!</h1>
-      <Title emoji="🔧" text={`PATCH ${str}`} />
+      <Title emoji="🔧" text={`PATCH ${patch}`} />
 
       {data.map((obj) => (
         <DownloadBox key={obj.downloadLink}>
           <>
-            <Version v={3} />
+            <Version v={obj.versi} />
             <span className="arrow">{"👇 "}</span>
             <Link pw="Password di Video" link={`${obj.downloadLink}`} />
 
