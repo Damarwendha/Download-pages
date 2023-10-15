@@ -33,3 +33,6 @@ button {
 button:hover {
   border-color: #ff64e5;
 }
+.subscribe{
+  opacity: 0%;
+}

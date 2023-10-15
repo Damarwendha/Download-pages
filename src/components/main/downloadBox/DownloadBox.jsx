@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import Version from "./version/Version";
 import Link from "./link/Link";
-import YoutubeVideo from "./youtubeVideo/YoutubeVideo";
+import Thumbnail from "./thumbnail/Thumbnail";
 import Button from "../button/Button";
 
 export default function DownloadBox({ data, i }) {
@@ -19,14 +19,20 @@ export default function DownloadBox({ data, i }) {
       className="boxmain"
     >
       <>
-        <Version v={i === 0 ? data.versi + " ( Terbaru )" : String(data.versi)} />
+        <Version
+          v={i === 0 ? data.versi + " ( Terbaru )" : String(data.versi)}
+        />
         <span className="arrow">{"👇 "}</span>
         <Link pw="Password di Video" link={`${data.downloadLink}`} />
 
         {showVideo ? (
-          <YoutubeVideo videoId={`${data.videoId}`} />
+          <Thumbnail thumbnailId={data.thumbnailId} videoId={data.videoId} />
         ) : (
-          <Button onClick={() => setShowVideo((s) => !s)}>
+          <Button
+            onClick={() => {
+              setShowVideo((s) => !s);
+            }}
+          >
             Belum tau pw-nya bang
           </Button>
         )}
@@ -37,5 +43,5 @@ export default function DownloadBox({ data, i }) {
 
 DownloadBox.propTypes = {
   data: PropTypes.object,
-  i: PropTypes.number
+  i: PropTypes.number,
 };

@@ -14,6 +14,7 @@ export default function Main() {
       {boxes.map((data, i) => (
         <DownloadBox key={data.downloadLink} i={i} data={data} />
       ))}
+      {}
     </div>
   );
 }
