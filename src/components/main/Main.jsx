@@ -9,7 +9,6 @@ export default function Main() {
 
   return (
     <div className="main">
-      <h1 className="subscribe">Subscribe!!</h1>
       <Title emoji="🔧" text={`PATCH ${patch}`} />
 
       {boxes.map((data, i) => (
