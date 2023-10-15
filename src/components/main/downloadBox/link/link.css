@@ -1,9 +1,12 @@
 .pw {
-  margin-bottom: 0px;
+  margin: 0;
 }
 .link-download{
   font-weight: bolder;
+  text-decoration: underline;
+  width: 100%;
 }
 .link-download:hover{
   font-style: italic;
+  width: 100%;
 }

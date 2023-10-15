@@ -6,10 +6,6 @@
   align-items: center;
   margin-top: 0px;
 }
-.arrow {
-  margin: -3px;
-  animation: bounce2 5s infinite;
-}
 .boxmain:hover{
   filter: drop-shadow(0 0 1em #000000);
 }
