@@ -11,9 +11,11 @@ export default function Main() {
     <div className="main">
       <Header emoji="🔧" text={`PATCH ${patch}`} />
 
-      {boxes.map((data, i) => (
-        <DownloadBox key={data.downloadLink} i={i} data={data} />
-      ))}
+      <div className="container">
+        {boxes.map((data, i) => (
+          <DownloadBox key={data.downloadLink} i={i} data={data} />
+        ))}
+      </div>
     </div>
   );
 }

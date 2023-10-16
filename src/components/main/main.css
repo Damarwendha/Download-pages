@@ -12,3 +12,15 @@
 .subscribe:hover{
   font-style: italic;
 }
+
+@media (768px <= width <= 1440px) {
+  .container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  } 
+  .boxmain{
+    flex-basis: 230;
+  }
+}
