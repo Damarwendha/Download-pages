@@ -1,21 +1,16 @@
+.boxmain{
+  width: 230px;
+}
+
 .boxmain:hover{
   filter: drop-shadow(0 0 1em #000000);
 }
-.version {
-  margin-bottom: -10px;
-  margin-top: -20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.customButton{
+  border-top: 2px solid rgb(211, 211, 211);
+  transition: border-top 1s border 1s;
 }
-.version h6{
-  margin: 0;
-  background-color: rgb(3, 161, 3);
-  border-radius: 10px;
-  padding: 2px 5px;
-}
-.version h2{
-  margin-top: 0;
+
+.customButton:hover{
+  border-top: 0px solid rgb(139, 139, 139);
 }
