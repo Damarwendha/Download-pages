@@ -1,6 +1,5 @@
 import Box from "../../shared/ui/box/Box";
-import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./header/Header";
 import Link from "../../shared/ui/link/Link";
 import Thumbnail from "./thumbnail/Thumbnail";
@@ -9,23 +8,29 @@ import "./downloadBox.css";
 
 export default function DownloadBox({ data, i }) {
   const [showLink, setShowLink] = useState(false);
-  const [showCount, setShowCount] = useState(false);
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(3); // derived state, when count < 3 its mean true or showing the count
 
   const handleButton = () => {
-    setShowCount((c) => !c);
-
-    const interval = setInterval(() => {
-      setCount((c) => c - 1);
-    }, 1500);
-
-    const timeout = setTimeout(() => {
-      setShowLink((l) => !l);
-      setShowCount((c) => !c);
-      clearTimeout(timeout);
-      clearInterval(interval);
-    }, 3000);
+    setCount(2);
+    console.log("changes");
   };
+
+  let interval;
+  useEffect(() => {
+    if (count < 3 && count > 0) {
+      interval = setInterval(() => {
+        setCount((c) => c - 1);
+      }, 1500);
+    }
+
+    if (count === 0) {
+      setShowLink((s) => !s);
+    }
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [count]);
 
   return (
     <Box
@@ -42,13 +47,13 @@ export default function DownloadBox({ data, i }) {
         <Link url={`${data.downloadLink}`} />
       ) : (
         <Button
-          text={showCount ? `Tunggu sebentar... ${count}` : "Download disini"}
+          text={count < 3 ? `Tunggu sebentar... ${count}` : "Download disini"}
           onClick={handleButton}
           padding="5px 20px"
           margin="5px"
-          backgroundColor={showCount ? "black" : "blue"}
-          isDisabled={showCount}
-          border={showCount ? "0px" : null}
+          backgroundColor={count < 3 ? "black" : "blue"}
+          isDisabled={count < 3}
+          border={count < 3 ? "0px" : null}
         />
       )}
 
