@@ -22,5 +22,6 @@
   } 
   .boxmain{
     flex-basis: 230;
+    height: 230px;
   }
 }
