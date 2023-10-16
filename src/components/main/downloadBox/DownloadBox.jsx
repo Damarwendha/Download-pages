@@ -54,6 +54,7 @@ export default function DownloadBox({ data, i }) {
           backgroundColor={count < 3 ? "black" : "blue"}
           isDisabled={count < 3}
           border={count < 3 ? "0px" : null}
+          className='customButton'
         />
       )}
 
