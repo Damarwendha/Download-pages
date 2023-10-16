@@ -1,4 +1,4 @@
-const MLBBLiteData = {
+const mlLiteData = {
   patch: "NOLAN",
   desc: [
     // download box
@@ -17,4 +17,4 @@ const MLBBLiteData = {
   ],
 };
 
-export default configFpsData;
+export default mlLiteData;
