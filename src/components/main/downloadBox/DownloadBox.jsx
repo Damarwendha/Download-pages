@@ -12,7 +12,6 @@ export default function DownloadBox({ data, i }) {
 
   const handleButton = () => {
     setCount(2);
-    console.log("changes");
   };
 
   let interval;
