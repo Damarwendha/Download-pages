@@ -1,4 +1,5 @@
-@import "../../animation/colorChange.css";
+@import ".././shared/animations/borderBottomRgb.css";
+@import ".././shared/animations/shadowRgb.css";
 
 .navbar {
   display: flex;
@@ -15,7 +16,7 @@
   border-bottom: 2px solid #252525;
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
-  animation: colorChange 10s infinite;
+  animation: borderBottomRgb 10s infinite;
 }
 .child {
   float: left;
@@ -58,15 +59,4 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-@keyframes shadowRgb {
-  0% {
-    filter: drop-shadow(0 0 0.5em #fb07ff00);
-  }
-  25% {
-    filter: drop-shadow(0 0 0.5em #00ffdd6c);
-  }
-  50% {
-    filter: drop-shadow(0 0 1em #ff51d994);
-  }
 }

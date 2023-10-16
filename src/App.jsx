@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MLBBConfig from "./pages/MLBBConfig";
-import MLBBLite from "./pages/MLBBLite";
-import NotExits from "./pages/NotExits";
+import ConfigFps from "./pages/configFps/ConfigFps";
+import MlLite from "./pages/mlLite/MlLite";
+import NotExits from "./pages//notExits/NotExits";
 
 import "./App.css";
 
@@ -9,9 +9,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<MLBBConfig />} />
-        <Route path='/Config' element={<MLBBConfig />} />
-        <Route path='/MLBBLite' element={<MLBBLite />}/>
+        <Route index element={<ConfigFps />} />
+        <Route path='/ConfigFps' element={<ConfigFps />} />
+        <Route path='/MlLite' element={<MlLite />}/>
         <Route path='*' element={<NotExits />}/>
       </Routes>
     </BrowserRouter>

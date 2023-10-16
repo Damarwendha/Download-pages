@@ -1,4 +1,4 @@
-import Title from "./title/Title";
+import Header from "./header/Header";
 import DownloadBox from "./downloadBox/DownloadBox";
 import configFpsData from "../../utils/configFpsData";
 
@@ -9,12 +9,11 @@ export default function Main() {
 
   return (
     <div className="main">
-      <Title emoji="🔧" text={`PATCH ${patch}`} />
+      <Header emoji="🔧" text={`PATCH ${patch}`} />
 
       {boxes.map((data, i) => (
         <DownloadBox key={data.downloadLink} i={i} data={data} />
       ))}
-      {}
     </div>
   );
 }

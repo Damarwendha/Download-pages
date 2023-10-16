@@ -1,4 +1,4 @@
-@import '../../animation/bounce.css';
+@import '.././shared/animations/bounce.css';
 
 .footer {
   display: flex;

@@ -1,0 +1,10 @@
+#patch {
+  color: #ffffff;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#patch:hover{
+  font-style: italic;
+}

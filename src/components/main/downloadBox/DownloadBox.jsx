@@ -1,10 +1,10 @@
-import Box from "../box/Box";
+import Box from "../../shared/ui/box/Box";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import Version from "./version/Version";
-import Link from "./link/Link";
+import Header from "./header/Header";
+import Link from "../../shared/ui/link/Link";
 import Thumbnail from "./thumbnail/Thumbnail";
-import Button from "../button/Button";
+import Button from "../../shared/ui/button/Button";
 import "./downloadBox.css";
 
 export default function DownloadBox({ data, i }) {
@@ -14,9 +14,11 @@ export default function DownloadBox({ data, i }) {
 
   const handleButton = () => {
     setShowCount((c) => !c);
+
     const interval = setInterval(() => {
       setCount((c) => c - 1);
     }, 1500);
+
     const timeout = setTimeout(() => {
       setShowLink((l) => !l);
       setShowCount((c) => !c);
@@ -34,33 +36,23 @@ export default function DownloadBox({ data, i }) {
       bgColor="#ffffff17"
       className="boxmain"
     >
-      <>
-        <Version
-          v={i === 0 ? data.versi + " ( Terbaru )" : String(data.versi)}
-        />
+      <Header v={data.versi} i={i} />
 
-        {!showCount && !showLink && (
-          <Button
-            text="Download disini"
-            onClick={handleButton}
-            padding="5px 20px"
-            margin="5px"
-            backgroundColor="blue"
-          />
-        )}
-        {showCount && <span style={{backgroundColor: 'rgba(0, 0, 0, 0.384)', padding: '10px', borderRadius: '10px'}}>Tunggu sebentar... {count}</span>}
-        {showLink && (
-          <>
-            <Link pw="Password di Video" link={`${data.downloadLink}`} />
-          </>
-        )}
-        <Thumbnail thumbnailId={data.thumbnailId} videoId={data.videoId} />
-      </>
+      {showLink ? (
+        <Link url={`${data.downloadLink}`} />
+      ) : (
+        <Button
+          text={showCount ? `Tunggu sebentar... ${count}` : "Download disini"}
+          onClick={handleButton}
+          padding="5px 20px"
+          margin="5px"
+          backgroundColor={showCount ? "black" : "blue"}
+          isDisabled={showCount}
+          border={showCount ? "0px" : null}
+        />
+      )}
+
+      <Thumbnail thumbnailId={data.thumbnailId} videoId={data.videoId} />
     </Box>
   );
 }
-
-DownloadBox.propTypes = {
-  data: PropTypes.object,
-  i: PropTypes.number,
-};

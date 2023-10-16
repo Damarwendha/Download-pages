@@ -6,15 +6,16 @@ export default function Navbar() {
       <li>
         <a
           style={
-            window.location.pathname === "/Config" ||
+            window.location.pathname === "/ConfigFps" ||
             window.location.pathname === "/"
               ? {
                   textDecoration: "underline",
                   filter: "drop-shadow(0 0 0.3em #ffffffaa)",
+                  color: "white",
                 }
               : { opacity: "100%" }
           }
-          href="/Config"
+          href="/ConfigFps"
           className="child"
         >
           Config
@@ -28,14 +29,15 @@ export default function Navbar() {
       <li>
         <a
           style={
-            window.location.pathname === "/MLBBLite"
+            window.location.pathname === "/MlLite"
               ? {
                   textDecoration: "underline",
                   filter: "drop-shadow(0 0 0.3em #ffffffaa)",
+                  color: "white",
                 }
               : { opacity: "100%" }
           }
-          href="/MLBBLite"
+          href="/MlLite"
           className="child"
         >
           ML Lite

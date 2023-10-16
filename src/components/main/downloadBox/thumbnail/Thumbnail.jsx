@@ -3,7 +3,7 @@ import "./thumbnail.css";
 
 export default function Thumbnail({ thumbnailId, videoId }) {
   return (
-    <a className="overlay" href={"https://youtu.be/" + thumbnailId + videoId}>
+    <a className="overlay" href={"https://youtu.be/" + videoId}>
       <svg
         className="ytp-button"
         height="100%"
@@ -25,8 +25,3 @@ export default function Thumbnail({ thumbnailId, videoId }) {
     </a>
   );
 }
-
-Thumbnail.propTypes = {
-  videoId: PropTypes.string,
-  thumbnailId: PropTypes.string,
-};
