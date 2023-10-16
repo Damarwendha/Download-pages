@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import './header.css'
 
 export default function Header({ v, i }) {
