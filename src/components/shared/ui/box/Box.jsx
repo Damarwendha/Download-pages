@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./box.css";
+import styles from "./box.module.css";
 
 export default function Box({
   children,
@@ -12,7 +12,7 @@ export default function Box({
 }) {
   return (
     <div
-      className={`box ${className}`}
+      className={`${styles.box} ${className}`}
       style={{
         margin: margin,
         border: border,
