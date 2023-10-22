@@ -1,47 +1,15 @@
-import "./navbar.css";
+import styles from "./navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <ul className="navbar">
+    <ul className={styles.navbar}>
       <li>
-        <a
-          style={
-            window.location.pathname === "/ConfigFps" ||
-            window.location.pathname === "/"
-              ? {
-                  textDecoration: "underline",
-                  filter: "drop-shadow(0 0 0.3em #ffffffaa)",
-                  color: "white",
-                }
-              : { opacity: "100%" }
-          }
-          href="/ConfigFps"
-          className="child"
-        >
-          Config
-        </a>
+        <NavLink to="/">Config</NavLink>
       </li>
-      <img
-        src="images/channels4_profile.jpg"
-        alt="logo"
-        className="logo child"
-      />
+      <img src="images/channels4_profile.jpg" alt="logo" />
       <li>
-        <a
-          style={
-            window.location.pathname === "/MlLite"
-              ? {
-                  textDecoration: "underline",
-                  filter: "drop-shadow(0 0 0.3em #ffffffaa)",
-                  color: "white",
-                }
-              : { opacity: "100%" }
-          }
-          href="/MlLite"
-          className="child"
-        >
-          ML Lite
-        </a>
+        <NavLink to="/MlLite">ML Lite</NavLink>
       </li>
     </ul>
   );
