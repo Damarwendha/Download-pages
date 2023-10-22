@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
-import "./header.css";
+import styles from "./header.module.css";
 
 export default function Header({ emoji, text }) {
   return (
-    <h3 id='patch'>
-      <span>{emoji} </span>
-       {text} 
-      <span> {emoji}</span>
-    </h3>
+    <header className={styles.header}>
+      <h3>
+        <span>{emoji} </span>
+        {text}
+        <span> {emoji}</span>
+      </h3>
+    </header>
   );
 }
 
