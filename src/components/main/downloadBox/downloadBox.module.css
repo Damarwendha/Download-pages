@@ -1,0 +1,19 @@
+.boxmain {
+  width: 230px;
+}
+.boxmain {
+  flex-basis: 230;
+  height: 230px;
+}
+.boxmain:hover {
+  filter: drop-shadow(0 0 1em #000000);
+}
+
+.button {
+  border-top: 1px solid rgb(211, 211, 211);
+  transition: border-top 1s border 1s;
+}
+
+.button:hover {
+  border-top: 0px solid rgb(139, 139, 139);
+}

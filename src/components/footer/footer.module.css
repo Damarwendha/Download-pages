@@ -1,0 +1,33 @@
+@import ".././shared/animations/bounce.css";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: var(--black);
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-top: 1px solid var(--whiteLow);
+}
+
+.footer div {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer a img {
+  animation: bounce 3s infinite;
+}
+.footer a img:hover {
+  animation-play-state: paused;
+}
+.footer p {
+  align-self: center;
+  white-space: nowrap;
+  margin: 0;
+}
