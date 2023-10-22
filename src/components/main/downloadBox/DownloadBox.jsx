@@ -1,35 +1,21 @@
 import Box from "../../shared/ui/box/Box";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "./header/Header";
 import Link from "../../shared/ui/link/Link";
 import Thumbnail from "./thumbnail/Thumbnail";
 import Button from "../../shared/ui/button/Button";
-import "./downloadBox.css";
+import styles from "./downloadBox.module.css";
+import { useTimer } from "./../../../hooks/useTimer.js";
 
 export default function DownloadBox({ data, i }) {
   const [showLink, setShowLink] = useState(false);
-  const [count, setCount] = useState(3); // derived state, when count < 3 its mean true or showing the count
+  const { runTimer, currentCount, isRunning } = useTimer(3, () =>
+    setShowLink(true)
+  );
 
-  const handleButton = () => {
-    setCount(2);
-  };
-
-  let interval;
-  useEffect(() => {
-    if (count < 3 && count > 0) {
-      interval = setInterval(() => {
-        setCount((c) => c - 1);
-      }, 1500);
-    }
-
-    if (count === 0) {
-      setShowLink((s) => !s);
-    }
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [count]);
+  function handleButton() {
+    runTimer();
+  }
 
   return (
     <Box
@@ -38,7 +24,7 @@ export default function DownloadBox({ data, i }) {
       border="1px solid #ffffff60"
       padding="30px"
       bgColor="#ffffff17"
-      className="boxmain"
+      className={styles.boxmain}
     >
       <Header v={data.versi} i={i} />
 
@@ -46,14 +32,16 @@ export default function DownloadBox({ data, i }) {
         <Link url={`${data.downloadLink}`} />
       ) : (
         <Button
-          text={count < 3 ? `Tunggu sebentar... ${count}` : "Download disini"}
+          text={
+            isRunning ? `Tunggu sebentar... ${currentCount}` : "Download disini"
+          }
           onClick={handleButton}
           padding="5px 20px"
           margin="5px"
-          backgroundColor={count < 3 ? "black" : "blue"}
-          isDisabled={count < 3}
-          border={count < 3 ? "0px" : null}
-          className='customButton'
+          backgroundColor={isRunning ? "black" : "blue"}
+          isDisabled={isRunning}
+          border={isRunning ? "0px" : null}
+          className={styles.button}
         />
       )}
 
