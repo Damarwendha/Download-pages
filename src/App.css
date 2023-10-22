@@ -5,8 +5,12 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow: hidden;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--white);
   --green: rgb(0, 184, 0);
+  --black: #141414;
+  --white: rgb(238, 238, 238);
+  --gray: rgba(238, 238, 238, 0.76);
+  --whiteLow: rgba(238, 238, 238, 0.247);
 }
 body {
   padding-top: 50px;
