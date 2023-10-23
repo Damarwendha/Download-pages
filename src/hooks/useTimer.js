@@ -8,8 +8,8 @@ export function useTimer(time, action) {
     setIsRunning(true);
   }
 
-  let interval;
   useEffect(() => {
+    let interval;
     if (isRunning && currentCount > 0) {
       interval = setInterval(() => {
         setCount((c) => c - 1);
