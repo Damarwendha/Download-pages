@@ -1,11 +1,11 @@
-import Box from "../../shared/ui/box/Box";
 import { useState } from "react";
+import { useTimer } from "./../../../hooks/useTimer.js";
 import Header from "./header/Header";
 import Link from "../../shared/ui/link/Link";
 import Thumbnail from "./thumbnail/Thumbnail";
 import Button from "../../shared/ui/button/Button";
+import Box from "../../shared/ui/box/Box";
 import styles from "./downloadBox.module.css";
-import { useTimer } from "./../../../hooks/useTimer.js";
 
 export default function DownloadBox({ data, i }) {
   const [showLink, setShowLink] = useState(false);

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./thumbnail.css";
 
 export default function Thumbnail({ thumbnailId, videoId }) {
