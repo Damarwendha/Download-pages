@@ -24,7 +24,7 @@ export function useTimer(time, action) {
     return () => {
       clearInterval(interval);
     };
-  }, [currentCount, isRunning]);
+  }, [currentCount, isRunning, action]);
 
   return { runTimer, currentCount, isRunning };
 }
