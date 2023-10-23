@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-let interval;
-
 export function useTimer(time, action) {
   const [currentCount, setCount] = useState(time);
   const [isRunning, setIsRunning] = useState(false);
@@ -10,6 +8,7 @@ export function useTimer(time, action) {
     setIsRunning(true);
   }
 
+  let interval;
   useEffect(() => {
     if (isRunning && currentCount > 0) {
       interval = setInterval(() => {
