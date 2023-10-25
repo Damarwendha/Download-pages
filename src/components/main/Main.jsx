@@ -1,11 +1,10 @@
 import Header from "./header/Header";
 import DownloadBox from "./downloadBox/DownloadBox";
-import configFpsData from "../../utils/configFpsData";
 
 import styles from "./main.module.css";
 
-export default function Main() {
-  const { patch, desc: boxes } = configFpsData;
+export default function Main({data}) {
+  const { patch, desc: boxes } = data;
 
   return (
     <div className={styles.main}>
