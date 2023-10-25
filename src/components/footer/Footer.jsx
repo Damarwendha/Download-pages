@@ -7,12 +7,12 @@ export default function Footer() {
     <div className={styles.footer}>
       <div>
         <Logo
-          img="images/youtube-logo-png-46031.png"
+          img="/images/youtube-logo-png-46031.png"
           alt="youtube"
           href="https://m.youtube.com/channel/UCyNj7Rfvk3N7thKppPnS3Jw"
         />
         <Logo
-          img="images/github.png"
+          img="/images/github.png"
           alt="github"
           href="https://github.com/Damarwendha"
           width="35px"
