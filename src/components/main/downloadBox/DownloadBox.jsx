@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTimer } from "./../../../hooks/useTimer.js";
+import { useCountdown } from "./../../../hooks/useCountdown.js";
 import Header from "./header/Header";
 import Thumbnail from "./thumbnail/Thumbnail";
 import Link from "../../shared/ui/link/Link";
@@ -9,12 +9,12 @@ import styles from "./downloadBox.module.css";
 
 export default function DownloadBox({ data, i }) {
   const [showLink, setShowLink] = useState(false);
-  const { runTimer, currentCount, isRunning } = useTimer(3, () =>
+  const { runCountdown, currentCount, isRunning } = useCountdown(3, () =>
     setShowLink(true)
   );
 
   function handleButton() {
-    runTimer();
+    runCountdown();
   }
 
   return (
