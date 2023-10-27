@@ -9,7 +9,7 @@ import styles from "./downloadBox.module.css";
 
 export default function DownloadBox({ data, i }) {
   const [showLink, setShowLink] = useState(false);
-  const { runCountdown, currentCount, isRunning } = useCountdown(3, () =>
+  const { runCountdown, currentCount, isRunning } = useCountdown(2, () =>
     setShowLink(true)
   );
 
