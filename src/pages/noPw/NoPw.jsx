@@ -2,10 +2,9 @@ import { NavLink } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
-import configNoPwData from './../../data/configNoPwData.js';
+import configNoPwData from "./../../data/configNoPwData.js";
 
-
-function NoPw({ id }) {
+function NoPw({ id, versi }) {
   return (
     <>
       <Navbar>
@@ -17,7 +16,7 @@ function NoPw({ id }) {
           <NavLink to={`/MlLite/${id}`}>ML Lite</NavLink>
         </li>
       </Navbar>
-      <Main data={configNoPwData} />
+      <Main data={configNoPwData[versi - 1]} />
       <Footer />
     </>
   );
