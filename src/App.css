@@ -17,3 +17,6 @@ body {
   padding-bottom: 100%;
   background-color: #181724;
 }
+html,body{
+  height: 120%;
+}
