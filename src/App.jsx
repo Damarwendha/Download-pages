@@ -16,10 +16,22 @@ export default function App() {
       <Routes>
         <Route index element={<Navigate to="Config" />} />
         <Route path="Config" element={<ConfigFps />} />
-        <Route path={`Config/${V1_ID}`} element={<NoPw id={V1_ID} />} />
-        <Route path={`Config/${V2_ID}`} element={<NoPw id={V2_ID} />} />
-        <Route path={`Config/${V3_ID}`} element={<NoPw id={V3_ID} />} />
-        <Route path={`Config/${V4_ID}`} element={<NoPw id={V4_ID} />} />
+        <Route
+          path={`Config/${V1_ID}`}
+          element={<NoPw id={V1_ID} versi={1} />}
+        />
+        <Route
+          path={`Config/${V2_ID}`}
+          element={<NoPw id={V2_ID} versi={2} />}
+        />
+        <Route
+          path={`Config/${V3_ID}`}
+          element={<NoPw id={V3_ID} versi={3} />}
+        />
+        <Route
+          path={`Config/${V4_ID}`}
+          element={<NoPw id={V4_ID} versi={4} />}
+        />
         <Route path="MlLite" element={<MlLite type="pw" />} />
         <Route
           path={`MlLite/${V1_ID}`}
