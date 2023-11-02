@@ -13,7 +13,7 @@ export default function MlLite({ type, id }) {
             <NavLink to={`/Config/${id}`}>Config</NavLink>
           )}
         </li>
-        <img src="/images/channels4_profile.jpg" alt="logo" />
+        <img src="/images/channels4_profile.jpg" alt="logo" loading="lazy" />
         <li>
           {type === "pw" ? (
             <NavLink to="/MlLite">ML Lite</NavLink>

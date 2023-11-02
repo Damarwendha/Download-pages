@@ -11,7 +11,7 @@ function NoPw({ id, versi }) {
         <li>
           <NavLink to={`/Config/${id}`}>Config</NavLink>
         </li>
-        <img src="/images/channels4_profile.jpg" alt="logo" />
+        <img src="/images/channels4_profile.jpg" alt="logo" loading="lazy"/>
         <li>
           <NavLink to={`/MlLite/${id}`}>ML Lite</NavLink>
         </li>
