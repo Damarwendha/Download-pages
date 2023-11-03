@@ -9,6 +9,7 @@ export default function Button({
   margin,
   border,
   backgroundColor,
+  color,
   isDisabled = false,
   className,
 }) {
@@ -17,7 +18,7 @@ export default function Button({
       disabled={isDisabled}
       onClick={onClick}
       className={`button ${className}`}
-      style={{ padding, width, margin, border, backgroundColor }}
+      style={{ padding, width, margin, border, backgroundColor, color }}
     >
       {text}
     </button>
@@ -34,4 +35,5 @@ Button.propTypes = {
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
   isDisabled: PropTypes.bool,
+  color: PropTypes.string,
 };
