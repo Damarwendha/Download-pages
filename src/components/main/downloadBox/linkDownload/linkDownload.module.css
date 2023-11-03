@@ -1,0 +1,19 @@
+.button {
+  transition: all 1s;
+}
+
+.button:hover {
+  scale: 95%;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.button:active {
+  scale: 94%;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
