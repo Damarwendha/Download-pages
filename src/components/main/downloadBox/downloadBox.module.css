@@ -5,6 +5,3 @@
   flex-basis: 230;
   height: 230px;
 }
-.boxmain:hover {
-  filter: drop-shadow(0 0 1em #000000);
-}
