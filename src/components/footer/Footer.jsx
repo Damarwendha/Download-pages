@@ -1,5 +1,4 @@
-import Logo from "../shared/ui/logo/Logo";
-
+import Logo from "@/components/shared/ui/logo/Logo";
 import styles from "./footer.module.css";
 
 export default function Footer() {

@@ -1,5 +1,5 @@
-import Button from "../../../../shared/ui/button/Button";
-import styles from "../linkDownload.module.css";
+import Button from "@/components/shared/ui/button/Button";
+import styles from "./startButton.module.css";
 
 function StartButton({ onClick }) {
   return (

@@ -1,6 +1,6 @@
+import Box from "@/components/shared/ui/box/Box";
 import Header from "./header/Header";
 import Thumbnail from "./thumbnail/Thumbnail";
-import Box from "../../shared/ui/box/Box";
 import styles from "./downloadBox.module.css";
 import LinkDownload from "./linkDownload/LinkDownload.jsx";
 

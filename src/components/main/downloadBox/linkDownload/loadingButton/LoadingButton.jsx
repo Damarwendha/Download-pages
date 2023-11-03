@@ -1,4 +1,4 @@
-import Button from "../../../../shared/ui/button/Button";
+import Button from "@/components/shared/ui/button/Button";
 
 function LoadingButton({ currenCount }) {
   return (

@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
-import Main from "../../components/main/Main";
-import configNoPwData from "./../../data/configNoPwData.js";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import Main from "@/components/main/Main";
+import configNoPwData from "@/data/configNoPwData.js";
 
 function NoPw({ id, versi }) {
   return (
