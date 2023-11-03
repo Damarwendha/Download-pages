@@ -1,12 +1,12 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Spinner from "./components/shared/ui/loadingSpinner/Spinner.jsx";
-import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Spinner from "@/components/shared/ui/loadingSpinner/Spinner.jsx";
+import "@/App.css";
 
-const ConfigFps = lazy(() => import("./pages/configFps/ConfigFps"));
-const MlLite = lazy(() => import("./pages/mlLite/MlLite"));
-const NoPw = lazy(() => import("./pages/noPw/NoPw"));
-const NotExits = lazy(() => import("./pages/notExits/NotExits"));
+const ConfigFps = lazy(() => import("@/pages/configFps/ConfigFps"));
+const MlLite = lazy(() => import("@/pages/mlLite/MlLite"));
+const NoPw = lazy(() => import("@/pages/noPw/NoPw"));
+const NotExits = lazy(() => import("@/pages/notExits/NotExits"));
 
 const V1_ID = "JmwT6";
 const V2_ID = "PusT9";
@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route index element={<ConfigFps />} />
+          <Route index element={<Navigate to="Config" />} />
           <Route path="Config" element={<ConfigFps />} />
           <Route
             path={`Config/${V1_ID}`}
