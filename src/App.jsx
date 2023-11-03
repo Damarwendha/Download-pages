@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Spinner from "./components/shared/ui/loadingSpinner/Spinner.jsx";
 import "./App.css";
 
@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route index element={<Navigate to="Config" />} />
+          <Route index element={<ConfigFps />} />
           <Route path="Config" element={<ConfigFps />} />
           <Route
             path={`Config/${V1_ID}`}
